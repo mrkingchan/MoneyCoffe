@@ -1,0 +1,18 @@
+PODS:
+  - MJExtension (3.0.15.1)
+  - MJRefresh (1.4.7)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - MJExtension
+  - MJRefresh (~> 1.4.7)
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MJRefresh: 6b140993028fa30f1fcb88e82925a7c7911415cf
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: a49bed86ceac67aca24462c0c05611cb1130f8b4
+
+COCOAPODS: 1.4.0

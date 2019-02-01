@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E060CD222194CE50CEF8924 /* libPods-MoneyCoffee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F22D95C9E7D8160696174FA4 /* libPods-MoneyCoffee.a */; };
+		9619D5B721ECD19E00CE6FC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5B621ECD19E00CE6FC1 /* AppDelegate.m */; };
+		9619D5C521ECD19F00CE6FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5C421ECD19F00CE6FC1 /* main.m */; };
+		9619D5CF21ECD19F00CE6FC1 /* MoneyCoffeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5CE21ECD19F00CE6FC1 /* MoneyCoffeTests.m */; };
+		9619D5DA21ECD19F00CE6FC1 /* MoneyCoffeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5D921ECD19F00CE6FC1 /* MoneyCoffeUITests.m */; };
+		9619D5E921ECD22900CE6FC1 /* MainWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5E821ECD22900CE6FC1 /* MainWebVC.m */; };
+		9619D5F721ECD25B00CE6FC1 /* ShareAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9619D5EB21ECD25B00CE6FC1 /* ShareAsset.xcassets */; };
+		9619D5F821ECD25B00CE6FC1 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5ED21ECD25B00CE6FC1 /* ShareView.m */; };
+		9619D5F921ECD25B00CE6FC1 /* JHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5F021ECD25B00CE6FC1 /* JHUD.m */; };
+		9619D5FA21ECD25B00CE6FC1 /* JHUDAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5F221ECD25B00CE6FC1 /* JHUDAnimationView.m */; };
+		9619D5FB21ECD25B00CE6FC1 /* UIImage+JHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5F421ECD25B00CE6FC1 /* UIImage+JHUD.m */; };
+		9619D5FC21ECD25B00CE6FC1 /* UIView+JHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5F621ECD25B00CE6FC1 /* UIView+JHUD.m */; };
+		9619D5FF21ECD5C000CE6FC1 /* UIView+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5FD21ECD5C000CE6FC1 /* UIView+Rect.m */; };
+		9619D60B21EDCF4C00CE6FC1 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9619D60621EDCF4C00CE6FC1 /* libWeChatSDK.a */; };
+		9619D60C21EDCF4C00CE6FC1 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9619D60721EDCF4C00CE6FC1 /* README.txt */; };
+		9619D60E21EDD06B00CE6FC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9619D60D21EDD06B00CE6FC1 /* SystemConfiguration.framework */; };
+		9619D61021EDD07600CE6FC1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9619D60F21EDD07600CE6FC1 /* libz.tbd */; };
+		9619D61221EDD08000CE6FC1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9619D61121EDD08000CE6FC1 /* libsqlite3.0.tbd */; };
+		9619D61421EDD08A00CE6FC1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9619D61321EDD08A00CE6FC1 /* libc++.tbd */; };
+		9619D61621EDD0B900CE6FC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9619D61521EDD0B900CE6FC1 /* CFNetwork.framework */; };
+		9619D61821EDD0D100CE6FC1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9619D61721EDD0D100CE6FC1 /* CoreTelephony.framework */; };
+		9619D61B21EDD21E00CE6FC1 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D61A21EDD21D00CE6FC1 /* UIViewController+Alert.m */; };
+		96A1FCF821F56909007C2A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A1FCF721F56909007C2A2E /* Main.storyboard */; };
+		96A1FCFA21F56959007C2A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A1FCF921F56959007C2A2E /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9619D5CB21ECD19F00CE6FC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9619D5AA21ECD19E00CE6FC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9619D5B121ECD19E00CE6FC1;
+			remoteInfo = MoneyCoffe;
+		};
+		9619D5D621ECD19F00CE6FC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9619D5AA21ECD19E00CE6FC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9619D5B121ECD19E00CE6FC1;
+			remoteInfo = MoneyCoffe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06734CD174E51AECB5517725 /* libPods-MoneyCoffe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoneyCoffe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4C1FB640FD4B1BB1B5BD47 /* Pods-MoneyCoffe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyCoffe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyCoffe/Pods-MoneyCoffe.debug.xcconfig"; sourceTree = "<group>"; };
+		707D48B711696CEE7AB62DFE /* Pods-MoneyCoffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyCoffee.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyCoffee/Pods-MoneyCoffee.release.xcconfig"; sourceTree = "<group>"; };
+		75CEEF6F4D8C615834E0D34D /* Pods-MoneyCoffe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyCoffe.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyCoffe/Pods-MoneyCoffe.release.xcconfig"; sourceTree = "<group>"; };
+		9619D5B221ECD19E00CE6FC1 /* MoneyCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9619D5B521ECD19E00CE6FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9619D5B621ECD19E00CE6FC1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9619D5C321ECD19F00CE6FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9619D5C421ECD19F00CE6FC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9619D5CA21ECD19F00CE6FC1 /* MoneyCoffeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyCoffeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9619D5CE21ECD19F00CE6FC1 /* MoneyCoffeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyCoffeTests.m; sourceTree = "<group>"; };
+		9619D5D021ECD19F00CE6FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9619D5D521ECD19F00CE6FC1 /* MoneyCoffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyCoffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9619D5D921ECD19F00CE6FC1 /* MoneyCoffeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyCoffeUITests.m; sourceTree = "<group>"; };
+		9619D5DB21ECD19F00CE6FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9619D5E721ECD22900CE6FC1 /* MainWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWebVC.h; sourceTree = "<group>"; };
+		9619D5E821ECD22900CE6FC1 /* MainWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWebVC.m; sourceTree = "<group>"; };
+		9619D5EB21ECD25B00CE6FC1 /* ShareAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ShareAsset.xcassets; sourceTree = "<group>"; };
+		9619D5EC21ECD25B00CE6FC1 /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
+		9619D5ED21ECD25B00CE6FC1 /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
+		9619D5EF21ECD25B00CE6FC1 /* JHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHUD.h; sourceTree = "<group>"; };
+		9619D5F021ECD25B00CE6FC1 /* JHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHUD.m; sourceTree = "<group>"; };
+		9619D5F121ECD25B00CE6FC1 /* JHUDAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHUDAnimationView.h; sourceTree = "<group>"; };
+		9619D5F221ECD25B00CE6FC1 /* JHUDAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHUDAnimationView.m; sourceTree = "<group>"; };
+		9619D5F321ECD25B00CE6FC1 /* UIImage+JHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JHUD.h"; sourceTree = "<group>"; };
+		9619D5F421ECD25B00CE6FC1 /* UIImage+JHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JHUD.m"; sourceTree = "<group>"; };
+		9619D5F521ECD25B00CE6FC1 /* UIView+JHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JHUD.h"; sourceTree = "<group>"; };
+		9619D5F621ECD25B00CE6FC1 /* UIView+JHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JHUD.m"; sourceTree = "<group>"; };
+		9619D5FD21ECD5C000CE6FC1 /* UIView+Rect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rect.m"; sourceTree = "<group>"; };
+		9619D5FE21ECD5C000CE6FC1 /* UIView+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rect.h"; sourceTree = "<group>"; };
+		9619D60621EDCF4C00CE6FC1 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		9619D60721EDCF4C00CE6FC1 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		9619D60821EDCF4C00CE6FC1 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		9619D60921EDCF4C00CE6FC1 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		9619D60A21EDCF4C00CE6FC1 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		9619D60D21EDD06B00CE6FC1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9619D60F21EDD07600CE6FC1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9619D61121EDD08000CE6FC1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		9619D61321EDD08A00CE6FC1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		9619D61521EDD0B900CE6FC1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9619D61721EDD0D100CE6FC1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		9619D61921EDD21D00CE6FC1 /* UIViewController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
+		9619D61A21EDD21D00CE6FC1 /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
+		96A1FCF721F56909007C2A2E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		96A1FCF921F56959007C2A2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1F640E39211328A6599E3D0 /* Pods-MoneyCoffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyCoffee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyCoffee/Pods-MoneyCoffee.debug.xcconfig"; sourceTree = "<group>"; };
+		F22D95C9E7D8160696174FA4 /* libPods-MoneyCoffee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoneyCoffee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9619D5AF21ECD19E00CE6FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9619D61821EDD0D100CE6FC1 /* CoreTelephony.framework in Frameworks */,
+				9619D61621EDD0B900CE6FC1 /* CFNetwork.framework in Frameworks */,
+				9619D61421EDD08A00CE6FC1 /* libc++.tbd in Frameworks */,
+				9619D61221EDD08000CE6FC1 /* libsqlite3.0.tbd in Frameworks */,
+				9619D61021EDD07600CE6FC1 /* libz.tbd in Frameworks */,
+				9619D60E21EDD06B00CE6FC1 /* SystemConfiguration.framework in Frameworks */,
+				9619D60B21EDCF4C00CE6FC1 /* libWeChatSDK.a in Frameworks */,
+				1E060CD222194CE50CEF8924 /* libPods-MoneyCoffee.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9619D5C721ECD19F00CE6FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9619D5D221ECD19F00CE6FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9619D5A921ECD19E00CE6FC1 = {
+			isa = PBXGroup;
+			children = (
+				9619D5B421ECD19E00CE6FC1 /* MoneyCoffe */,
+				9619D5CD21ECD19F00CE6FC1 /* MoneyCoffeTests */,
+				9619D5D821ECD19F00CE6FC1 /* MoneyCoffeUITests */,
+				9619D5B321ECD19E00CE6FC1 /* Products */,
+				E1C2F9287A204D129EB1F7D3 /* Pods */,
+				C2FE4915AF7A33E67B21A307 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9619D5B321ECD19E00CE6FC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9619D5B221ECD19E00CE6FC1 /* MoneyCoffee.app */,
+				9619D5CA21ECD19F00CE6FC1 /* MoneyCoffeeTests.xctest */,
+				9619D5D521ECD19F00CE6FC1 /* MoneyCoffeeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9619D5B421ECD19E00CE6FC1 /* MoneyCoffe */ = {
+			isa = PBXGroup;
+			children = (
+				9619D61C21EDD24A00CE6FC1 /* Categeory */,
+				9619D60521EDCF4C00CE6FC1 /* OpenSDK1.8.0 */,
+				9619D5EE21ECD25B00CE6FC1 /* HUD */,
+				9619D5EA21ECD25B00CE6FC1 /* Share */,
+				9619D5B521ECD19E00CE6FC1 /* AppDelegate.h */,
+				9619D5B621ECD19E00CE6FC1 /* AppDelegate.m */,
+				9619D5E721ECD22900CE6FC1 /* MainWebVC.h */,
+				9619D5E821ECD22900CE6FC1 /* MainWebVC.m */,
+				96A1FCF721F56909007C2A2E /* Main.storyboard */,
+				9619D5C321ECD19F00CE6FC1 /* Info.plist */,
+				9619D5C421ECD19F00CE6FC1 /* main.m */,
+				96A1FCF921F56959007C2A2E /* Assets.xcassets */,
+			);
+			path = MoneyCoffe;
+			sourceTree = "<group>";
+		};
+		9619D5CD21ECD19F00CE6FC1 /* MoneyCoffeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9619D5CE21ECD19F00CE6FC1 /* MoneyCoffeTests.m */,
+				9619D5D021ECD19F00CE6FC1 /* Info.plist */,
+			);
+			path = MoneyCoffeTests;
+			sourceTree = "<group>";
+		};
+		9619D5D821ECD19F00CE6FC1 /* MoneyCoffeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9619D5D921ECD19F00CE6FC1 /* MoneyCoffeUITests.m */,
+				9619D5DB21ECD19F00CE6FC1 /* Info.plist */,
+			);
+			path = MoneyCoffeUITests;
+			sourceTree = "<group>";
+		};
+		9619D5EA21ECD25B00CE6FC1 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				9619D5EB21ECD25B00CE6FC1 /* ShareAsset.xcassets */,
+				9619D5EC21ECD25B00CE6FC1 /* ShareView.h */,
+				9619D5ED21ECD25B00CE6FC1 /* ShareView.m */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		9619D5EE21ECD25B00CE6FC1 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				9619D5EF21ECD25B00CE6FC1 /* JHUD.h */,
+				9619D5F021ECD25B00CE6FC1 /* JHUD.m */,
+				9619D5F121ECD25B00CE6FC1 /* JHUDAnimationView.h */,
+				9619D5F221ECD25B00CE6FC1 /* JHUDAnimationView.m */,
+				9619D5F321ECD25B00CE6FC1 /* UIImage+JHUD.h */,
+				9619D5F421ECD25B00CE6FC1 /* UIImage+JHUD.m */,
+				9619D5F521ECD25B00CE6FC1 /* UIView+JHUD.h */,
+				9619D5F621ECD25B00CE6FC1 /* UIView+JHUD.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		9619D60521EDCF4C00CE6FC1 /* OpenSDK1.8.0 */ = {
+			isa = PBXGroup;
+			children = (
+				9619D60621EDCF4C00CE6FC1 /* libWeChatSDK.a */,
+				9619D60721EDCF4C00CE6FC1 /* README.txt */,
+				9619D60821EDCF4C00CE6FC1 /* WechatAuthSDK.h */,
+				9619D60921EDCF4C00CE6FC1 /* WXApi.h */,
+				9619D60A21EDCF4C00CE6FC1 /* WXApiObject.h */,
+			);
+			path = OpenSDK1.8.0;
+			sourceTree = "<group>";
+		};
+		9619D61C21EDD24A00CE6FC1 /* Categeory */ = {
+			isa = PBXGroup;
+			children = (
+				9619D61921EDD21D00CE6FC1 /* UIViewController+Alert.h */,
+				9619D61A21EDD21D00CE6FC1 /* UIViewController+Alert.m */,
+				9619D5FE21ECD5C000CE6FC1 /* UIView+Rect.h */,
+				9619D5FD21ECD5C000CE6FC1 /* UIView+Rect.m */,
+			);
+			path = Categeory;
+			sourceTree = "<group>";
+		};
+		C2FE4915AF7A33E67B21A307 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9619D61721EDD0D100CE6FC1 /* CoreTelephony.framework */,
+				9619D61521EDD0B900CE6FC1 /* CFNetwork.framework */,
+				9619D61321EDD08A00CE6FC1 /* libc++.tbd */,
+				9619D61121EDD08000CE6FC1 /* libsqlite3.0.tbd */,
+				9619D60F21EDD07600CE6FC1 /* libz.tbd */,
+				9619D60D21EDD06B00CE6FC1 /* SystemConfiguration.framework */,
+				06734CD174E51AECB5517725 /* libPods-MoneyCoffe.a */,
+				F22D95C9E7D8160696174FA4 /* libPods-MoneyCoffee.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1C2F9287A204D129EB1F7D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F4C1FB640FD4B1BB1B5BD47 /* Pods-MoneyCoffe.debug.xcconfig */,
+				75CEEF6F4D8C615834E0D34D /* Pods-MoneyCoffe.release.xcconfig */,
+				F1F640E39211328A6599E3D0 /* Pods-MoneyCoffee.debug.xcconfig */,
+				707D48B711696CEE7AB62DFE /* Pods-MoneyCoffee.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9619D5B121ECD19E00CE6FC1 /* MoneyCoffee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9619D5DE21ECD19F00CE6FC1 /* Build configuration list for PBXNativeTarget "MoneyCoffee" */;
+			buildPhases = (
+				8A06D9F70668723FFD033676 /* [CP] Check Pods Manifest.lock */,
+				9619D5AE21ECD19E00CE6FC1 /* Sources */,
+				9619D5AF21ECD19E00CE6FC1 /* Frameworks */,
+				9619D5B021ECD19E00CE6FC1 /* Resources */,
+				30E84DA13A34880858AABD3B /* [CP] Embed Pods Frameworks */,
+				77F98F10708A6DF1355177C3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoneyCoffee;
+			productName = MoneyCoffe;
+			productReference = 9619D5B221ECD19E00CE6FC1 /* MoneyCoffee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9619D5C921ECD19F00CE6FC1 /* MoneyCoffeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9619D5E121ECD19F00CE6FC1 /* Build configuration list for PBXNativeTarget "MoneyCoffeeTests" */;
+			buildPhases = (
+				9619D5C621ECD19F00CE6FC1 /* Sources */,
+				9619D5C721ECD19F00CE6FC1 /* Frameworks */,
+				9619D5C821ECD19F00CE6FC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9619D5CC21ECD19F00CE6FC1 /* PBXTargetDependency */,
+			);
+			name = MoneyCoffeeTests;
+			productName = MoneyCoffeTests;
+			productReference = 9619D5CA21ECD19F00CE6FC1 /* MoneyCoffeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9619D5D421ECD19F00CE6FC1 /* MoneyCoffeeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9619D5E421ECD19F00CE6FC1 /* Build configuration list for PBXNativeTarget "MoneyCoffeeUITests" */;
+			buildPhases = (
+				9619D5D121ECD19F00CE6FC1 /* Sources */,
+				9619D5D221ECD19F00CE6FC1 /* Frameworks */,
+				9619D5D321ECD19F00CE6FC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9619D5D721ECD19F00CE6FC1 /* PBXTargetDependency */,
+			);
+			name = MoneyCoffeeUITests;
+			productName = MoneyCoffeUITests;
+			productReference = 9619D5D521ECD19F00CE6FC1 /* MoneyCoffeeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9619D5AA21ECD19E00CE6FC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Chan;
+				TargetAttributes = {
+					9619D5B121ECD19E00CE6FC1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9619D5C921ECD19F00CE6FC1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9619D5B121ECD19E00CE6FC1;
+					};
+					9619D5D421ECD19F00CE6FC1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9619D5B121ECD19E00CE6FC1;
+					};
+				};
+			};
+			buildConfigurationList = 9619D5AD21ECD19E00CE6FC1 /* Build configuration list for PBXProject "MoneyCoffee" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9619D5A921ECD19E00CE6FC1;
+			productRefGroup = 9619D5B321ECD19E00CE6FC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9619D5B121ECD19E00CE6FC1 /* MoneyCoffee */,
+				9619D5C921ECD19F00CE6FC1 /* MoneyCoffeeTests */,
+				9619D5D421ECD19F00CE6FC1 /* MoneyCoffeeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9619D5B021ECD19E00CE6FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9619D5F721ECD25B00CE6FC1 /* ShareAsset.xcassets in Resources */,
+				9619D60C21EDCF4C00CE6FC1 /* README.txt in Resources */,
+				96A1FCFA21F56959007C2A2E /* Assets.xcassets in Resources */,
+				96A1FCF821F56909007C2A2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9619D5C821ECD19F00CE6FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9619D5D321ECD19F00CE6FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30E84DA13A34880858AABD3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyCoffee/Pods-MoneyCoffee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77F98F10708A6DF1355177C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoneyCoffee/Pods-MoneyCoffee-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyCoffee/Pods-MoneyCoffee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A06D9F70668723FFD033676 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyCoffee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9619D5AE21ECD19E00CE6FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9619D5FB21ECD25B00CE6FC1 /* UIImage+JHUD.m in Sources */,
+				9619D5FF21ECD5C000CE6FC1 /* UIView+Rect.m in Sources */,
+				9619D5C521ECD19F00CE6FC1 /* main.m in Sources */,
+				9619D61B21EDD21E00CE6FC1 /* UIViewController+Alert.m in Sources */,
+				9619D5F821ECD25B00CE6FC1 /* ShareView.m in Sources */,
+				9619D5FA21ECD25B00CE6FC1 /* JHUDAnimationView.m in Sources */,
+				9619D5E921ECD22900CE6FC1 /* MainWebVC.m in Sources */,
+				9619D5FC21ECD25B00CE6FC1 /* UIView+JHUD.m in Sources */,
+				9619D5F921ECD25B00CE6FC1 /* JHUD.m in Sources */,
+				9619D5B721ECD19E00CE6FC1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9619D5C621ECD19F00CE6FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9619D5CF21ECD19F00CE6FC1 /* MoneyCoffeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9619D5D121ECD19F00CE6FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9619D5DA21ECD19F00CE6FC1 /* MoneyCoffeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9619D5CC21ECD19F00CE6FC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9619D5B121ECD19E00CE6FC1 /* MoneyCoffee */;
+			targetProxy = 9619D5CB21ECD19F00CE6FC1 /* PBXContainerItemProxy */;
+		};
+		9619D5D721ECD19F00CE6FC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9619D5B121ECD19E00CE6FC1 /* MoneyCoffee */;
+			targetProxy = 9619D5D621ECD19F00CE6FC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9619D5DC21ECD19F00CE6FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9619D5DD21ECD19F00CE6FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9619D5DF21ECD19F00CE6FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1F640E39211328A6599E3D0 /* Pods-MoneyCoffee.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8RUK52926;
+				INFOPLIST_FILE = MoneyCoffe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoneyCoffe/OpenSDK1.8.0",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vip.renrentui.www;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9619D5E021ECD19F00CE6FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 707D48B711696CEE7AB62DFE /* Pods-MoneyCoffee.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M8RUK52926;
+				INFOPLIST_FILE = MoneyCoffe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoneyCoffe/OpenSDK1.8.0",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vip.renrentui.www;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9619D5E221ECD19F00CE6FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY5BNMAGUW;
+				INFOPLIST_FILE = MoneyCoffeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Chan.MoneyCoffeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyCoffee.app/MoneyCoffee";
+			};
+			name = Debug;
+		};
+		9619D5E321ECD19F00CE6FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY5BNMAGUW;
+				INFOPLIST_FILE = MoneyCoffeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Chan.MoneyCoffeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyCoffee.app/MoneyCoffee";
+			};
+			name = Release;
+		};
+		9619D5E521ECD19F00CE6FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY5BNMAGUW;
+				INFOPLIST_FILE = MoneyCoffeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Chan.MoneyCoffeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoneyCoffe;
+			};
+			name = Debug;
+		};
+		9619D5E621ECD19F00CE6FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YY5BNMAGUW;
+				INFOPLIST_FILE = MoneyCoffeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Chan.MoneyCoffeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoneyCoffe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9619D5AD21ECD19E00CE6FC1 /* Build configuration list for PBXProject "MoneyCoffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9619D5DC21ECD19F00CE6FC1 /* Debug */,
+				9619D5DD21ECD19F00CE6FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9619D5DE21ECD19F00CE6FC1 /* Build configuration list for PBXNativeTarget "MoneyCoffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9619D5DF21ECD19F00CE6FC1 /* Debug */,
+				9619D5E021ECD19F00CE6FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9619D5E121ECD19F00CE6FC1 /* Build configuration list for PBXNativeTarget "MoneyCoffeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9619D5E221ECD19F00CE6FC1 /* Debug */,
+				9619D5E321ECD19F00CE6FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9619D5E421ECD19F00CE6FC1 /* Build configuration list for PBXNativeTarget "MoneyCoffeeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9619D5E521ECD19F00CE6FC1 /* Debug */,
+				9619D5E621ECD19F00CE6FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9619D5AA21ECD19E00CE6FC1 /* Project object */;
+}
