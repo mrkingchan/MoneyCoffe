@@ -1,18 +1,35 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - MJExtension (3.0.15.1)
   - MJRefresh (1.4.7)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - AFNetworking
   - MJExtension
   - MJRefresh (~> 1.4.7)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 6b140993028fa30f1fcb88e82925a7c7911415cf
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: a49bed86ceac67aca24462c0c05611cb1130f8b4
+PODFILE CHECKSUM: 0ddc05b960c265c8942e33723d0a62ad199bd58a
 
 COCOAPODS: 1.4.0

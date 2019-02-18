@@ -15,6 +15,7 @@
 #import <SVProgressHUD.h>
 #import "WXApi.h"
 #import "UIViewController+Alert.h"
+#import "UIColor+HexString.h"
 #define kURL(xxx) [NSURL URLWithString:xxx]
 #define iPhoneX_BOTTOM_HEIGHT  ([UIScreen mainScreen].bounds.size.height==812?34:0)
 
@@ -27,6 +28,11 @@
     WKWebViewConfiguration *_configure;
     UILabel*_showErrorMessage;
     NSString *_urlStr;
+    BOOL _flag;
+    int _index;
+    
+    BOOL _outFlag;
+    int _outIndex;
 }
 
 @property (nonatomic, strong) UIProgressView *progressView;
@@ -41,8 +47,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:19]}];
+#define kBackColor     [UIColor colorWithRed:244/255.0 green:243/255.0 blue:244/255.0 alpha:1.0]
+    UIImage *bgimage = [self imageFromColor:[UIColor whiteColor] withSize:CGSizeMake(self.view.frame.size.width, kStatusBarHeight + 44.f)];
+    [self.navigationController.navigationBar setBackgroundImage:bgimage forBarMetrics:UIBarMetricsDefault];
+    UIImage *lineImage = [self imageFromColor:kBackColor withSize:CGSizeMake(self.view.frame.size.width, 0.5f)];
+    [self.navigationController.navigationBar setShadowImage:lineImage];
+    
+    
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithHexString:@"#3a3a3a"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"refresh"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:0 target:self action:@selector(buttonAction:)];
     self.hudView = [[JHUD alloc]initWithFrame:self.view.bounds];
-
+    _index = 0;
+    _outIndex = 0;
     _configure = [WKWebViewConfiguration new];
     _configure.userContentController = [WKUserContentController new];
     [_configure.userContentController addScriptMessageHandler:self name:@"shareToWeChat"];
@@ -52,26 +69,27 @@
     } else {
         _urlStr = urlStr;
     }
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     //webView
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, kStatusBarHeight, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height - kStatusBarHeight) configuration:_configure];
+    //CGRectMake(0, kStatusBarHeight, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height - kStatusBarHeight)
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 5.0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - kStatusBarHeight - 44 ) configuration:_configure];
     _webView.navigationDelegate = self;
     _webView.allowsBackForwardNavigationGestures = YES;
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_urlStr]]];
     [self.view addSubview:_webView];
     
-    /*
+    
      self.progressView = [[UIProgressView alloc] init];
      self.progressView.progressViewStyle = UIProgressViewStyleBar;
-     self.progressView.frame = CGRectMake(0, kStatusBarHeight, self.view.bounds.size.width, 5.0);
+     self.progressView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 5.0);
      self.progressView.trackTintColor = [UIColor lightGrayColor];
-     self.progressView.progressTintColor = [UIColor redColor];
+     self.progressView.progressTintColor = [UIColor colorWithHexString:@"#f75946"];
      self.progressView.progress = 0.0;
      [self.view addSubview:self.progressView];
     [_webView addObserver:self
                forKeyPath:@"estimatedProgress"
                   options:NSKeyValueObservingOptionNew
                   context:NULL];
-     */
     
     if (@available(iOS 11.0, *)) {
         self.additionalSafeAreaInsets = UIEdgeInsetsMake(0, 0, iPhoneX_BOTTOM_HEIGHT, 0);
@@ -103,24 +121,53 @@
     [self.view addSubview:_showErrorMessage];
 }
 
-/*
-#pragma mark - KVO
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary<NSString *,id> *)change
-                       context:(void *)context {
-    if ([keyPath isEqualToString:@"estimatedProgress"]) {
-        [self.progressView setProgress:_webView.estimatedProgress animated:YES] ;
-        if (self.progressView.progress == 1) {
-            [UIView animateWithDuration:0.2 animations:^{
-                self.progressView.alpha = 0;
-                [self.progressView removeFromSuperview];
-            }];
-        }
-    }
- }
- */
 
+// 计算wkWebView进度条
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (object ==  _webView && [keyPath isEqualToString:@"estimatedProgress"]) {
+        CGFloat newprogress = [[change objectForKey:NSKeyValueChangeNewKey] doubleValue];
+        self.progressView.alpha = 1.0f;
+        [self.progressView setProgress:newprogress animated:YES];
+        if (newprogress >= 1.0f) {
+            [UIView animateWithDuration:0.3f
+                                  delay:0.3f
+                                options:UIViewAnimationOptionCurveEaseOut
+                             animations:^{
+                                 self.progressView.alpha = 0.0f;
+                             }
+                             completion:^(BOOL finished) {
+                                 [self.progressView setProgress:0 animated:NO];
+                             }];
+        }
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+- (UIImage*) imageFromColor: (UIColor*) color withSize:(CGSize)size{
+        CGRect rect=CGRectMake(0.0f, 0.0f, size.width, size.height);
+        UIGraphicsBeginImageContext(rect.size);
+    
+        CGContextRef context = UIGraphicsGetCurrentContext();
+    
+        CGContextSetFillColorWithColor(context, [color CGColor]);
+    
+        CGContextFillRect(context, rect);
+    
+        UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+        UIGraphicsEndImageContext();
+    
+        return theImage;
+    
+}
+
+// MARK: - private Method
+- (void)buttonAction:(id)sender {
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_urlStr]]];
+}
 
 // MARK: - 动画loading
 - (void)circleJoinAnimation {
@@ -149,6 +196,7 @@
 
 // MARK: - WKNavigationDelegate
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    _flag = _outFlag = NO;
     _urlStr = navigationAction.request.URL.absoluteString;
     NSLog(@"url = %@",navigationAction.request.URL.absoluteString);
     if ([_urlStr isEqualToString:@"http://m.zk27.com/html/user/index.html"]) {
@@ -156,6 +204,12 @@
             [[NSUserDefaults standardUserDefaults] synchronize];
     }
     decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+- (void)back {
+    if ([_webView canGoBack]) {
+        [_webView goBack];
+    }
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
@@ -167,7 +221,6 @@
      */
     
     _showErrorMessage.hidden = true;
-
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
@@ -176,9 +229,71 @@
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     //最多5秒之后自动隐藏
-    [self circleJoinAnimation];
+//    [self circleJoinAnimation];
 //    [SVProgressHUD show];
     _showErrorMessage.hidden = YES;
+    
+    NSArray * domains = [[NSUserDefaults standardUserDefaults] objectForKey:@"systemUrls"];
+    if (domains != nil &&domains.count  ) {
+        for (int i = 0 ; i <domains.count; i ++) {
+            NSDictionary *json = domains[i];
+            if ([_urlStr rangeOfString:json[@"domain"]].location != NSNotFound && ![_urlStr hasSuffix:json[@"domain"]]) {
+                _flag = YES;
+                _index = i;
+                break;
+            }
+        }
+    }
+    
+    if (_flag) {
+        self.navigationItem.leftBarButtonItems = nil;
+        self.navigationItem.leftBarButtonItem = nil;
+        self.navigationItem.title =domains[_index][@"title"];
+    } else {
+        
+        UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:0 target:self action:@selector(back)];
+        UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:0 target:self action:@selector(close)];
+
+        self.navigationItem.leftBarButtonItems = @[item2,item1];
+        //在扩展域名判断
+        NSArray *outsideDomains = [[NSUserDefaults standardUserDefaults] objectForKey:@"outsideUrl"];
+        if (outsideDomains!=nil && outsideDomains.count) {
+            for (int i = 0 ; i <outsideDomains.count; i ++) {
+                NSDictionary *json = outsideDomains[i];
+                if ([_urlStr rangeOfString:json[@"domain"]].location != NSNotFound) {
+                    _outFlag = YES;
+                    _outIndex = i;
+                    break;
+                }
+            }
+        }
+        if (_outFlag) {
+            //在扩展域名之内的
+            self.navigationItem.title =outsideDomains[_outIndex][@"title"];
+        } else {
+            //例如 m.xxx.com/ret
+           /*NSArray *items =  [[_urlStr componentsSeparatedByString:@"com"][0] componentsSeparatedByString:@"."];
+            
+            NSString *title = @"";*/
+            NSRange range = [_urlStr rangeOfString:@"(?<=://)[a-zA-Z\.0-9]+(?=\/|:)" options:NSRegularExpressionSearch];
+            NSString *title = [_urlStr substringWithRange:range];
+            if ([title rangeOfString:@"www."].location != NSNotFound) {
+                title =  [title stringByReplacingOccurrencesOfString:@"www." withString:@""];
+            }
+            self.navigationItem.title = [NSString stringWithFormat:@"来自 %@",title];
+        }
+    }
+    
+}
+
+- (void)close {
+    NSString *urlStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"webUrl"];
+    if (!urlStr) {
+        _urlStr = @"http://m.zk27.com";
+    } else {
+        _urlStr = urlStr;
+    }
+    [_webView loadRequest:[NSURLRequest requestWithURL:kURL(_urlStr)]];
 }
 
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
@@ -219,6 +334,6 @@
 // MARK: -memory management
 - (void)dealloc {
     [_configure.userContentController removeAllUserScripts];
-//    [_webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    [_webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 @end

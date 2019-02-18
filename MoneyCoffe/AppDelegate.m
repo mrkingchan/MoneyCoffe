@@ -11,7 +11,7 @@
 #import "WXApi.h"
 #define kWeChatId @"wx5e466bc433c262ef"
 #import "UIViewController+Alert.h"
-
+#import "AFNetworking.h"
 @interface AppDelegate () <WXApiDelegate>
 
 @end
@@ -21,8 +21,49 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    /*
+     createTime = "2019-01-31 20:13:52.0";
+     description = " \U4eba\U4eba\U63a8";
+     domain = "zk27.com";
+     id = 2;
+     oauhAppId = 1;
+     title = "\U4eba\U4eba\U63a8";
+     type = 0;
+     */
+    [[AFHTTPSessionManager manager] POST:@"http://gateway.zk27.com/user/getSiteDomain" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *json = (NSDictionary *)responseObject;
+            if ([json[@"rel"] count]) {
+                [[NSUserDefaults standardUserDefaults ] setObject:json[@"rel"] forKey:@"systemUrls"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error = %@",error);
+    }];
+    
+    
+    [[AFHTTPSessionManager manager] POST:@"http://gateway.zk27.com/user/getExternalDomain" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *json = (NSDictionary *)responseObject;
+            if ([json[@"rel"] count]) {
+                [[NSUserDefaults standardUserDefaults ] setObject:json[@"rel"] forKey:@"outsideUrl"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error = %@",error);
+    }];
+    
+    
     _window.backgroundColor = [UIColor whiteColor];
-    _window.rootViewController = [MainWebVC new];
+    _window.rootViewController =[[UINavigationController alloc] initWithRootViewController:[MainWebVC new]];
     [WXApi registerApp:kWeChatId];
     [_window makeKeyAndVisible];
     return YES;

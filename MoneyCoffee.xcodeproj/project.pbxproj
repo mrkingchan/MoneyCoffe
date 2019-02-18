@@ -29,6 +29,7 @@
 		9619D61621EDD0B900CE6FC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9619D61521EDD0B900CE6FC1 /* CFNetwork.framework */; };
 		9619D61821EDD0D100CE6FC1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9619D61721EDD0D100CE6FC1 /* CoreTelephony.framework */; };
 		9619D61B21EDD21E00CE6FC1 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 9619D61A21EDD21D00CE6FC1 /* UIViewController+Alert.m */; };
+		96759D48221A425600383626 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 96759D46221A425600383626 /* UIColor+HexString.m */; };
 		96A1FCF821F56909007C2A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A1FCF721F56909007C2A2E /* Main.storyboard */; };
 		96A1FCFA21F56959007C2A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A1FCF921F56959007C2A2E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,8 @@
 		9619D61721EDD0D100CE6FC1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9619D61921EDD21D00CE6FC1 /* UIViewController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
 		9619D61A21EDD21D00CE6FC1 /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
+		96759D46221A425600383626 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		96759D47221A425600383626 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		96A1FCF721F56909007C2A2E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		96A1FCF921F56959007C2A2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1F640E39211328A6599E3D0 /* Pods-MoneyCoffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyCoffee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyCoffee/Pods-MoneyCoffee.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				9619D5EB21ECD25B00CE6FC1 /* ShareAsset.xcassets */,
 				9619D5EC21ECD25B00CE6FC1 /* ShareView.h */,
 				9619D5ED21ECD25B00CE6FC1 /* ShareView.m */,
+				96759D47221A425600383626 /* UIColor+HexString.h */,
+				96759D46221A425600383626 /* UIColor+HexString.m */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				9619D5FA21ECD25B00CE6FC1 /* JHUDAnimationView.m in Sources */,
 				9619D5E921ECD22900CE6FC1 /* MainWebVC.m in Sources */,
 				9619D5FC21ECD25B00CE6FC1 /* UIView+JHUD.m in Sources */,
+				96759D48221A425600383626 /* UIColor+HexString.m in Sources */,
 				9619D5F921ECD25B00CE6FC1 /* JHUD.m in Sources */,
 				9619D5B721ECD19E00CE6FC1 /* AppDelegate.m in Sources */,
 			);
